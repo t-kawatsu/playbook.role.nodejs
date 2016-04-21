@@ -1,0 +1,8 @@
+---
+- name: install nodejs version of {{ nodejs.version }}
+  shell: $SHELL -lc "nvm install {{ nodejs.version }}"
+  sudo: true
+
+- name: set default version of nodejs
+  shell: $SHELL -lc "nvm alias default node"
+  sudo: true

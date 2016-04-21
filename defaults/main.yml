@@ -1,0 +1,11 @@
+---
+# 
+nvm:
+  root: "/usr/local/nvm"
+  repo: "https://github.com/creationix/nvm.git"
+  group: develop
+  gid: 510
+
+#
+nodejs:
+  version: 5.7.0
