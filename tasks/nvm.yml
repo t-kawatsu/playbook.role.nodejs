@@ -1,6 +1,5 @@
 ---
 - name: install dependencies via YUM
-  sudo: true
   yum: name={{ item }} state=present
   with_items:
     - git
@@ -9,6 +8,7 @@
     - make
     - openssl-devel
     - libselinux-python
+  sudo: true
 
 - name: checkout nvm repo from {{ nvm.root }}
   git: repo={{ nvm.repo }}
@@ -18,9 +18,12 @@
   sudo: true
 
 - name: add nvm initialization to profile system-wide
-  template: src=etc/profile.d/nvm.sh.j2
-        dest=/etc/profile.d/nvm.sh
-        owner=root group=root mode=0644
+  template: > 
+    src=etc/profile.d/nvm.sh.j2
+    dest=/etc/profile.d/nvm.sh
+    owner=root 
+    group=root 
+    mode=0755
   sudo: true
 
 - name: upgrade nvm
