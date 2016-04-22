@@ -1,3 +1,5 @@
-export NVM_DIR="{{ nvm.root }}"
+if shopt -q login_shell ; then
+  export NVM_DIR="{{ nvm.root }}"
 
-. {{ nvm.root }}/nvm.sh
+  . {{ nvm.root }}/nvm.sh
+fi

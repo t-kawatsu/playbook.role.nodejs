@@ -3,6 +3,7 @@
 nvm:
   root: "/usr/local/nvm"
   repo: "https://github.com/creationix/nvm.git"
+  version: v0.31.0
   group: develop
   gid: 510
 
