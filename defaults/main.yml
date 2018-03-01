@@ -3,10 +3,10 @@
 nvm:
   root: "/usr/local/nvm"
   repo: "https://github.com/creationix/nvm.git"
-  version: v0.31.0
+  version: v0.33.8
   group: develop
   gid: 510
 
 #
 nodejs:
-  version: 5.7.0
+  version: 8.9.4
