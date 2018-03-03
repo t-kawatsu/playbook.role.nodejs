@@ -1,6 +1,6 @@
 ---
-- include: nvm.yml
+- import_tasks: nvm.yml
   tags: [nvm]
 
-- include: nodejs.yml
+- import_tasks: nodejs.yml
   tags: [nodejs]
